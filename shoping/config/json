@@ -1,0 +1,19 @@
+{
+  "app_name": "shopping",
+  "app_mode": "debug",
+  "app_host": "localhost",
+  "app_port": "8090",
+  "app_https":true
+}"database": {
+     "driver": "mysql",
+     "user": "root",
+     "password": "123456",
+     "host": "127.0.0.1",
+     "port": "3306",
+     "db_name": "shopping",
+     "charset": "utf8",
+}"redis":{
+
+
+
+}
