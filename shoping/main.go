@@ -31,6 +31,7 @@ func Router(engine *gin.Engine){
 	new(controller.MerchantController).Route(engine)
 	new(controller.HomeController).Route(engine)
 	new(controller.TokenController).Route(engine)
+	new(controller.OrderController).Route(engine)
 
 }
 

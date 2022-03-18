@@ -14,6 +14,12 @@ type Config struct {
 	Redis RedisConfig `json:"redis"`
 	Jwt JwtCfg `json:"jwt"`
 	Email EmailConfig `json:"email"`
+	GitHub GitHub `json:"git_hub"`
+}
+type GitHub struct {
+	ClientId string `json:"client_id"`
+	ClientSecret string `json:"client_secret"`
+	CallbackUrl string `json:"callback_url"`
 }
 type JwtCfg struct {
 	SigningKey string `json:"signing_key"`

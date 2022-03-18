@@ -9,7 +9,7 @@ type OrderService struct {
 
 }
 var (
-	od =dao.OrderDao{tool.GetDB()}
+	od =dao.OrderDao{tool.GetDb()}
 )
 func(os *OrderService)GetGoodid(uid int64,state string)([]int64,error){
 	gIdSlice,err:=od.GetGoodUid(uid,state)

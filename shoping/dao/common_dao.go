@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"log"
 	"shoping/model"
-	"time"
 )
 
 type CommonDao struct {
@@ -13,7 +12,7 @@ type CommonDao struct {
 func(cd *CommonDao)QueryById(id int64)([]model.Comment,error) {
 
 	var commentSlice []model.Comment
-	var commentTime time.Time
+	//var commentTime time.Time
 	stmt, err := cd.Prepare("select good_id,user_id,value,time,likes from where good_id = ?")
 	if err != nil {
 		log.Fatal(err.Error())
@@ -33,7 +32,7 @@ func(cd *CommonDao)QueryById(id int64)([]model.Comment,error) {
 			log.Fatal(err.Error())
 			return nil, err
 		}
-		commentModel.Time = commentTime.Format("2006-01-02 15:04:05")
+		//commentModel.Time = commentTime.Format("2006-01-02 15:04:05")
 
 		commentSlice = append(commentSlice, commentModel)
 

@@ -11,7 +11,7 @@ type MerChant struct {
 }
 func(mc *MerChant)GetMerchantGood(channel string)([]model.Merchant,[]model.Merchant,error){
 	var randSlice, rankSlice []model.Merchant
-    md:= dao.MerchantDao {tool.GetDB()}
+    md:= dao.MerchantDao {tool.GetDb()}
 	var merchantWithGood model.Merchant
 	gidSlice,err:=md.QueryRandomGood(channel)
 	if err!=nil{

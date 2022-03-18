@@ -20,7 +20,7 @@ type UserService struct {
 
 }
 var(
-	ud=dao.UserDao{tool.GetDB()}
+	ud=dao.UserDao{tool.GetDb()}
 	rd=dao.RedisDao{}
 )
 func(us *UserService)ChangeBalance(change ,uid int64 )error{

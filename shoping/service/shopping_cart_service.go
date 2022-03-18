@@ -11,7 +11,7 @@ type CartService struct {
 
 }
 var(
-	d=dao.CartDao{tool.GetDB()}
+	d=dao.CartDao{tool.GetDb()}
 )
 func(c *CartService)JudgeCartId(cartId int64)(bool,error){
 	_,err:=d.QueryByCid(cartId)

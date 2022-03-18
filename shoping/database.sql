@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS shopping;
 USE shopping;
 DROP TABLE IF EXISTS `user`;
-CREATE TABLE
+CREATE TABLE `user`
 (
     `id` INT AUTO_INCREMENT PRIMARY KEY;
     `total_likes` INT NOT NULL,
@@ -95,5 +95,15 @@ CREATE TABLE `order`{
     `type` VARCHAR(10) NOT NULL,
      `good_id` INT NOT NULL,
 }
+DROP TABLE IF EXIST `cart`;
+CREATE TABLE `cart`{
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `cart_id` INT NOT NULL,
+    `total_count` INT NOT NULL DEFAULT 0,
+    `total_amount` FLOAT NOT NULL DEFAULT 0,
+    `user_id` INT NOT NULL,
+
+}charset="utf8mb4";
+
 
 

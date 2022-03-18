@@ -16,6 +16,7 @@ type User struct {
 	Gender          string
 	Balance         float64//余额
 	CartId          int64//购物车id
+	Token      string
 
 
 

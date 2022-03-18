@@ -12,8 +12,8 @@
      "port": "3306",
      "db_name": "shopping",
      "charset": "utf8",
-}"redis":{
-
-
-
+}"github"{
+      "client_id": "1781d687de8c77ab7d78",
+      "client_secret":"a0fe8d3e12682ed2967fe5b72e2ef7daf7382da8",
+      "callback_url":"http://localhost:8080",
 }

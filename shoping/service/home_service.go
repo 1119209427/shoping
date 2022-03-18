@@ -11,7 +11,7 @@ type HomeService struct {
 
 }
 var (
-	hd=dao.MerchantDao{tool.GetDB()}
+	hd=dao.MerchantDao{tool.GetDb()}
 )
 
 // GetChannelInfo 获取京东快报
@@ -174,7 +174,7 @@ func(hc *HomeService)Search(keyWord string)([]model.MerchantWithGood,error){
 		merchantWithGood.Description=merchant.Description
 		merchantWithGood.Channel=merchant.Channel
 		merchantWithGood.Time=merchant.Time
-		merchantWithGood.FavorableRate=merchant.FavorableRate
+		//merchantWithGood.FavorableRate=merchant.FavorableRate
 		merchantWithGood.Volume=merchant.Volume
 		merchantWithGood.Followers=merchant.Followers
 		merchantWithGood.Followings=merchant.Followings

@@ -10,7 +10,7 @@ type CommonService struct{
 
 }
 var(
-	cd=dao.CommonDao{tool.GetDB()}
+	cd=dao.CommonDao{tool.GetDb()}
 )
 func (cs *CommonService)GetCommonSlice(id int64)([]model.Comment,error){
 	commonSlice,err:=cd.QueryById(id)

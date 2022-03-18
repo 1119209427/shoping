@@ -13,7 +13,7 @@ type GoodService struct {
 
 }
 var(
-	gd=dao.GoodDao{tool.GetDB()}
+	gd=dao.GoodDao{tool.GetDb()}
 
 )
 
