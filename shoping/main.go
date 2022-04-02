@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+
+	_ "gorm.io/driver/mysql"
+	_ "gorm.io/gorm"
 	"log"
 	"net/http"
 	"shoping/controller"
@@ -10,21 +13,23 @@ import (
 	"strings"
 )
 
-func main(){
-	cfg:=tool.GetCfg()
+func main() {
+	cfg := tool.GetCfg()
+	tool.Init()
 
-	route:=gin.Default()
+	tool.InitGorm()
+
+	route := gin.Default()
 	route.Use(Cors())
 
 	Router(route)
 
-	if err:=route.Run(cfg.AppHost+":"+cfg.AppPort);err!=nil{
+	if err := route.Run(cfg.AppHost + ":" + cfg.AppPort); err != nil {
 		log.Fatal(err.Error())
 	}
 
-
 }
-func Router(engine *gin.Engine){
+func Router(engine *gin.Engine) {
 	new(controller.UserController).Route(engine)
 	new(controller.CommonController).Route(engine)
 	new(controller.GoodController).Route(engine)

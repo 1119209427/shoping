@@ -12,7 +12,7 @@ func GetDb() *sql.DB {
 	return Db
 }
 
-func init() {
+func Init() {
 	cfg := GetCfg().DataBase
 
 	db, err := sql.Open(cfg.Driver, cfg.User+":"+cfg.Password+"@tcp("+cfg.Host+":"+cfg.Port+")/"+cfg.DbName+"?charset=utf8&parseTime=true&loc=Local")
